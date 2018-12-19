@@ -1,0 +1,44 @@
+body{
+ 
+  background: linear-gradient(to left,gray , silver) 
+}
+
+
+#p{
+  font-size: 50px;
+  background: linear-gradient(to right, silver, gray);
+  border-radius: 30px;
+  max-width: 1000px;
+  position: absolute;
+  top: 280px;
+  left: 350px;
+}
+#mm{
+  font-size: 30px;
+  background-color: gray;
+  border: 3px solid silver;
+  border-radius: 25px;
+  color: aqua;
+  position: absolute;
+  left: 4px;
+  top: 10px; 
+}
+
+#u{
+  font-size: 50px;
+  background: linear-gradient(to right, silver, gray);
+  border-radius: 30px;
+  max-width: 1000px;
+  position: absolute;
+  top: 500px;
+  left: 370px;
+}
+#v{
+  font-size: 50px;
+  background: linear-gradient(to right, silver, gray);
+  border-radius: 30px;
+  max-width: 1000px;
+  position: absolute;
+  top: 60px;
+  left: 370px;
+}

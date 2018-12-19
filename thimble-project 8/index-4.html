@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add UP</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <center>
+      <p1>Clicks :</p1><p1 id = "p">0</p1>
+      <span id="time">25:00</span>
+      <p2 id="h"></p2>
+      <p id="p1">0</p>
+
+      <button1 onClick=" if(a >= 75){a-=75; setInterval(v,1000);}">Cost 75</button1>
+      <button1 onClick="if(a >= 500){a-=500; setInterval(two,1000); }">Cost 500</button1>
+      <button1 onClick="if(a >= 20000){a-=20000; setInterval(three,1000); }">Cost 20,000</button1>
+      <button1 onClick="if(a >= 1000000){a-=1000000; setInterval(four,1000) }">Cost 1,000,000</button1>
+      <button1 onClick="if(a >= 1000000000){a-=1000000000; setInterval(fifth,1000) }">Cost 1,000,000,000</button1>
+      <button1 onClick="if(a >= 50000000000){a-=50000000000; setInterval(sixth,1000) }">Cost 50,000,000,000</button1>
+      <button1 onClick="" id="m">Add UP</button1>
+      <a href="index-2.html"><button>Back</button></a>
+      <button2 onClick="location.reload()">Play Again</button2>
+    </center>
+
+    <script>
+
+
+
+
+
+
+      var a = 0;
+      var z = 0;
+
+      addEventListener("click", function b() {
+        document.getElementById("p1").innerHTML = a;
+        a++
+
+      });
+      addEventListener("click", function(){
+        document.getElementById("p").innerHTML = z;
+        z++
+      });
+
+      function v(){
+        document.getElementById("p1").innerHTML = a+=0.5;
+      }
+     
+
+     
+
+      function two(){
+        document.getElementById("p1").innerHTML = a+=7.5;
+      }
+      function three(){
+        document.getElementById("p1").innerHTML = a+=250;
+      }
+      function four(){
+        document.getElementById("p1").innerHTML = a+=8750;
+      }
+      function fifth(){
+        document.getElementById("p1").innerHTML = a+=8750000;
+      }
+      function sixth(){
+        document.getElementById("p1").innerHTML = a+=53750000;
+      }
+      
+      function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+          minutes = parseInt(timer / 60, 10)
+          seconds = parseInt(timer % 60, 10);
+
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = minutes + ":" + seconds;
+
+          if (--timer < 0) {
+            display.textContent = "You Lose!";
+          }
+          else if(-timer < 0 && a >= 20000000000){
+            display.textContent = "You Win!";
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        var fiveMinutes =  25 * 60,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+      };
+
+    </script>  
+  </body>
+</html>
